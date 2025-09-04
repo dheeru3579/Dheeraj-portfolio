@@ -1,4 +1,5 @@
 import { Code, Cloud, Database, Users } from "lucide-react";
+import DotGrid from "@/components/backgrounds/DotGrid";
 
 const AboutSection = () => {
   const highlights = [
@@ -25,8 +26,12 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-20 relative overflow-hidden">
+      {/* Background Elements */}
+      <DotGrid size="md" opacity={0.1} animated={true} />
+      <div className="absolute inset-0 bg-gradient-subtle" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">

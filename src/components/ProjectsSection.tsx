@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Clock, Bell, FileText } from "lucide-react";
+import WavePattern from "@/components/backgrounds/WavePattern";
 
 const ProjectsSection = () => {
   const projects = [
@@ -49,8 +50,12 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-20 relative overflow-hidden">
+      {/* Background Elements */}
+      <WavePattern variant="flowing" direction="horizontal" />
+      <div className="absolute inset-0 bg-gradient-subtle opacity-95" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">

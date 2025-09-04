@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Linkedin, Github, Download, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
+import DotGrid from "@/components/backgrounds/DotGrid";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -64,8 +65,13 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 relative overflow-hidden">
+      {/* Background Elements */}
+      <DotGrid size="lg" opacity={0.08} animated={true} />
+      <div className="absolute inset-0 bg-gradient-subtle opacity-60" />
+      <div className="absolute inset-0 bg-background opacity-90" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">

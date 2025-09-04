@@ -100,6 +100,19 @@ export default {
 				'pulse-soft': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.8' }
+				},
+				'floating': {
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+					'50%': { transform: 'translateY(-20px) rotate(5deg)' }
+				},
+				'mesh-shift': {
+					'0%, 100%': { transform: 'scale(1) rotate(0deg)' },
+					'33%': { transform: 'scale(1.05) rotate(2deg)' },
+					'66%': { transform: 'scale(0.95) rotate(-1deg)' }
+				},
+				'parallax': {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(100%)' }
 				}
 			},
 			animation: {
@@ -109,12 +122,21 @@ export default {
 				'slide-in-right': 'slide-in-right 0.6s ease-out',
 				'scale-in': 'scale-in 0.4s ease-out',
 				'gradient-shift': 'gradient-shift 6s ease-in-out infinite',
-				'pulse-soft': 'pulse-soft 3s ease-in-out infinite'
+				'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
+				'floating': 'floating 8s ease-in-out infinite',
+				'mesh-shift': 'mesh-shift 12s ease-in-out infinite',
+				'parallax': 'parallax 20s linear infinite'
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-subtle': 'var(--gradient-subtle)',
-				'gradient-accent': 'var(--gradient-accent)'
+				'gradient-accent': 'var(--gradient-accent)',
+				'gradient-mesh': 'var(--gradient-mesh)',
+				'gradient-dots': 'var(--gradient-dots)',
+				'gradient-waves': 'var(--gradient-waves)',
+				'gradient-geometric': 'var(--gradient-geometric)',
+				'pattern-dots': 'var(--pattern-dots)',
+				'pattern-grid': 'var(--pattern-grid)'
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',

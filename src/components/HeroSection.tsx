@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink, Mail } from "lucide-react";
+import GeometricMesh from "@/components/backgrounds/GeometricMesh";
 
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
@@ -10,13 +11,14 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-32 h-32 border border-primary-foreground rounded-full animate-pulse-soft"></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 border border-primary-foreground rounded-full animate-pulse-soft delay-1000"></div>
-        <div className="absolute top-1/2 left-20 w-16 h-16 border border-primary-foreground rounded-full animate-pulse-soft delay-500"></div>
-      </div>
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Enhanced Geometric Background */}
+      <GeometricMesh variant="hero" animated={true} />
+      
+      {/* Additional Background Elements */}
+      <div className="absolute inset-0 bg-gradient-hero opacity-90" />
+      <div className="absolute inset-0 bg-pattern-dots opacity-20" 
+           style={{ backgroundSize: 'var(--pattern-dots-size)' }} />
 
       <div className="container mx-auto px-4 py-20 text-center relative z-10">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
