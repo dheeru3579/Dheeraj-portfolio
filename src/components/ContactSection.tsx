@@ -18,14 +18,14 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "dheeraj.rangareddy@example.com",
-      href: "mailto:dheeraj.rangareddy@example.com"
+      value: "dheerajdheeru3579@gmail.com",
+      href: "mailto:dheerajdheeru3579@gmail.com"
     },
     {
       icon: Phone, 
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+1 (346) 5290150",
+      href: "tel:+13465290150"
     },
     {
       icon: MapPin,
@@ -36,14 +36,14 @@ const ContactSection = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/dheeraj-rangareddy",
-      href: "https://linkedin.com/in/dheeraj-rangareddy"
+      value: "linkedin.com/in/dheerajrr",
+      href: "https://linkedin.com/in/dheerajrr"
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/dheeraj-rangareddy", 
-      href: "https://github.com/dheeraj-rangareddy"
+      value: "github.com/dheeru3579", 
+      href: "https://github.com/dheeru3579"
     }
   ];
 
@@ -119,7 +119,7 @@ const ContactSection = () => {
                 <div className="border-t border-border pt-8">
                   <Button 
                     className="w-full group"
-                    onClick={() => window.open('#', '_blank')}
+                    onClick={() => window.open('/DR_Resume.pdf', '_blank')}
                   >
                     <Download className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
                     Download Resume

@@ -1,4 +1,4 @@
-import { GraduationCap, Award, Calendar, MapPin } from "lucide-react";
+import { GraduationCap, Award } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const EducationSection = () => {
@@ -57,48 +57,28 @@ const EducationSection = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-primary">Education</h3>
                 </div>
-
                 <h4 className="text-lg font-semibold text-foreground mb-2">
                   {education.degree}
                 </h4>
-
-                <div className="text-muted-foreground mb-4 space-y-1">
-                  <div className="flex items-center">
-                    <MapPin className="h-4 w-4 mr-2" />
-                    {education.university}, {education.location}
-                  </div>
-                  <div className="flex items-center">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    Graduated {education.graduationDate}
-                  </div>
+                <div className="text-md text-muted-foreground mb-2">
+                  {education.university} • {education.location}
                 </div>
-
-                <div className="bg-accent/5 rounded-lg p-4 mb-6">
-                  <p className="text-sm font-semibold text-foreground">
-                    GPA: {education.gpa}
-                  </p>
+                <div className="text-sm text-muted-foreground mb-2">
+                  Graduation: {education.graduationDate} | GPA: {education.gpa}
                 </div>
-
-                <div>
-                  <h5 className="font-semibold text-foreground mb-3">Relevant Coursework:</h5>
-                  <div className="grid grid-cols-1 gap-2">
-                    {education.coursework.map((course, index) => (
-                      <div 
-                        key={course}
-                        className="flex items-center animate-slide-in-right"
-                        style={{ animationDelay: `${index * 100}ms` }}
-                      >
-                        <div className="w-1.5 h-1.5 bg-accent rounded-full mr-3"></div>
-                        <span className="text-sm text-foreground">{course}</span>
-                      </div>
+                <div className="mt-4">
+                  <div className="font-semibold text-sm mb-2">Relevant Coursework:</div>
+                  <ul className="list-disc list-inside text-sm text-foreground/80">
+                    {education.coursework.map((course) => (
+                      <li key={course}>{course}</li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </div>
             </div>
 
             {/* Certifications */}
-            <div className="animate-scale-in">
+            <div className="animate-fade-in-up">
               <div className="bg-card rounded-xl p-8 shadow-soft hover:shadow-card transition-all duration-300 h-full">
                 <div className="flex items-center mb-6">
                   <div className="bg-accent/10 p-3 rounded-lg mr-4">
@@ -106,7 +86,6 @@ const EducationSection = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-primary">Certifications</h3>
                 </div>
-
                 <div className="space-y-6">
                   {certifications.map((cert, index) => (
                     <div 
@@ -117,14 +96,12 @@ const EducationSection = () => {
                       <h4 className="font-semibold text-foreground mb-2">
                         {cert.title}
                       </h4>
-                      
                       <div className="text-sm text-muted-foreground mb-3">
                         <div>{cert.issuer} • {cert.date}</div>
                         <div className="text-xs mt-1">
                           Credential ID: {cert.credentialId}
                         </div>
                       </div>
-
                       <div className="flex flex-wrap gap-2">
                         {cert.skills.map((skill) => (
                           <Badge 
@@ -138,13 +115,6 @@ const EducationSection = () => {
                       </div>
                     </div>
                   ))}
-                </div>
-
-                {/* CTA for more certifications */}
-                <div className="mt-8 p-4 bg-primary/5 rounded-lg">
-                  <p className="text-sm text-foreground">
-                    Currently pursuing additional AWS certifications and staying updated with the latest technologies.
-                  </p>
                 </div>
               </div>
             </div>

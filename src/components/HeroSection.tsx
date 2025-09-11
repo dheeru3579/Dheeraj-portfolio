@@ -45,7 +45,7 @@ const HeroSection = () => {
             <Button 
               variant="hero"
               size="lg"
-              onClick={() => window.open('#', '_blank')}
+              onClick={() => window.open('/DR_Resume.pdf')}
               className="group"
             >
               <Download className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
